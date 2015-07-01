@@ -28,16 +28,19 @@ $(function() {
         });
 
         it('have defined URLs', function () {
-            allFeeds.forEach(function (e, i, a) {
-                expect(e.url).toBeDefined();
-                expect(e.url).not.toBe('');
+            allFeeds.forEach(function (feed) {
+                expect(feed.url).toBeDefined();
+                expect(feed.url).not.toBe('');
+                expect(feed.url).not.toBe(null);
+
             });
         });
 
         it('have defined names', function () {
-            allFeeds.forEach(function (e, i, a) {
-                expect(e.name).toBeDefined();
-                expect(e.name).not.toBe('');
+            allFeeds.forEach(function (feed) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name).not.toBe('');
+                expect(feed.name).not.toBe(null);
             });
         });
     });
